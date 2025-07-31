@@ -186,12 +186,12 @@ export default function MyVideos() {
 
           {/* Video Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {videos.map((video, index) => (
-              <div
-                key={video._id}
-                className="animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+                         {videos.map((video, index) => (
+               <div
+                 key={video._id?.toString() || index}
+                 className="animate-fade-in"
+                 style={{ animationDelay: `${index * 100}ms` }}
+               >
                 <MyVideoCard
                   video={video}
                   onDelete={handleDeleteVideo}
