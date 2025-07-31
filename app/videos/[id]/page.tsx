@@ -55,7 +55,8 @@ export default function VideoDetailPage() {
           <div className="text-6xl mb-4">📹</div>
           <h2 className="text-2xl font-semibold mb-2">Video not found</h2>
           <p className="text-base-content/70 mb-6">
-            The video you&apos;re looking for doesn&apos;t exist or has been removed.
+            The video you&apos;re looking for doesn&apos;t exist or has been
+            removed.
           </p>
           <Link href="/" className="btn btn-primary">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -121,7 +122,9 @@ export default function VideoDetailPage() {
             <div className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
               <span>
-                {formatDate(video.createdAt || new Date().toISOString())}
+                {formatDate(
+                  video.createdAt?.toString() || new Date().toISOString()
+                )}
               </span>
             </div>
             {video.userId && (
