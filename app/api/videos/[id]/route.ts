@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { connectToDatabase } from "@/lib/db";
-import Video from "@/models/Video";
+import Video, { IVideo } from "@/models/Video";
 
 export async function GET(
   request: NextRequest,
@@ -21,7 +21,7 @@ export async function GET(
     }
 
     console.log("Fetching video with ID:", id);
-    const video = await Video.findById(id).lean();
+    const video = await Video.findById(id).lean() as IVideo | null;
 
     if (!video) {
       console.log("Video not found with ID:", id);
