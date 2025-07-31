@@ -6,9 +6,7 @@ import { useState } from "react";
 import {
   Loader2,
   Upload,
-  FileVideo,
   AlertCircle,
-  CheckCircle,
 } from "lucide-react";
 
 interface FileUploadProps {

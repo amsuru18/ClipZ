@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSession, signOut } from "next-auth/react";
-import { Home, User, Video, Upload, LogOut, Settings } from "lucide-react";
+import { Home, User, Video, Upload, LogOut } from "lucide-react";
 import { useNotification } from "./Notification";
 
 export default function Header() {

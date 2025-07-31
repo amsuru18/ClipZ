@@ -32,7 +32,7 @@ export default function Login() {
         showNotification("Login successful!", "success");
         router.push("/");
       }
-    } catch (error) {
+    } catch {
       showNotification("An unexpected error occurred", "error");
     } finally {
       setLoading(false);

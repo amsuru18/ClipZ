@@ -55,7 +55,7 @@ export default function VideoDetailPage() {
           <div className="text-6xl mb-4">📹</div>
           <h2 className="text-2xl font-semibold mb-2">Video not found</h2>
           <p className="text-base-content/70 mb-6">
-            The video you're looking for doesn't exist or has been removed.
+            The video you&apos;re looking for doesn&apos;t exist or has been removed.
           </p>
           <Link href="/" className="btn btn-primary">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -127,7 +127,7 @@ export default function VideoDetailPage() {
             {video.userId && (
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                <span>User ID: {video.userId}</span>
+                <span>User ID: {video.userId.toString()}</span>
               </div>
             )}
           </div>

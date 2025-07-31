@@ -1,6 +1,6 @@
 import { IVideo } from "@/models/Video";
 import VideoComponent from "./VideoComponent";
-import { Video, Loader2 } from "lucide-react";
+import { Video } from "lucide-react";
 
 interface VideoFeedProps {
   videos: IVideo[];

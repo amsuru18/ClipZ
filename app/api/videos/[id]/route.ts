@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { connectToDatabase } from "@/lib/db";
-import Video, { IVideo } from "@/models/Video";
+import Video from "@/models/Video";
 
 export async function GET(
   request: NextRequest,

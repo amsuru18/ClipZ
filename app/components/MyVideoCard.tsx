@@ -47,7 +47,7 @@ export default function MyVideoCard({
         description: description.trim(),
       });
       setIsEditing(false);
-    } catch (error) {
+    } catch {
       showNotification("Failed to update video", "error");
     } finally {
       setIsSaving(false);
@@ -66,7 +66,7 @@ export default function MyVideoCard({
     setIsDeleting(true);
     try {
       await onDelete(videoId!);
-    } catch (error) {
+    } catch {
       setIsDeleting(false);
       showNotification("Failed to delete video", "error");
     }

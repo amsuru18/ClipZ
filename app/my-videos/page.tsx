@@ -25,7 +25,7 @@ export default function MyVideos() {
     }
 
     fetchMyVideos();
-  }, [session, status]);
+  }, [session, status, router]);
 
   const fetchMyVideos = async () => {
     try {
