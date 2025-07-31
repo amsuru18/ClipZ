@@ -43,7 +43,7 @@ export default function MyVideos() {
   const handleDeleteVideo = async (videoId: string) => {
     try {
       await apiClient.deleteVideo(videoId);
-      setVideos(videos.filter((video) => video._id !== videoId));
+      setVideos(videos.filter((video) => video._id?.toString() !== videoId));
       showNotification("Video deleted successfully", "success");
     } catch (error) {
       console.error("Error deleting video:", error);
@@ -58,7 +58,7 @@ export default function MyVideos() {
     try {
       const updatedVideo = await apiClient.updateVideo(videoId, updatedData);
       setVideos(
-        videos.map((video) => (video._id === videoId ? updatedVideo : video))
+        videos.map((video) => (video._id?.toString() === videoId ? updatedVideo : video))
       );
       showNotification("Video updated successfully", "success");
     } catch (error) {
